@@ -5,17 +5,12 @@
   "main": "packages/main/dist/main.js",
   "workspaces": ["packages/*"],
   "scripts": {
-    "build": "npm run build -w packages/main && npm run build -w packages/renderer",
-    "start": "node launch.js",
-    "pack": "npm run build && electron-packager . TestElectron --platform=win32 --arch=x64 --out=release --overwrite --prune=true"
-  },
-  "dependencies": {
-    "reflect-metadata": "^0.2.2",
-    "sqlite3": "^5.1.7",
-    "typeorm": "^0.3.20"
+    "start": "npm run build -w packages/main && npm run build -w packages/renderer && node launch.js",
+    "pack": "npm run build -w packages/main && npm run build -w packages/renderer && node pack.js"
   },
   "devDependencies": {
     "electron": "^32.0.0",
-    "electron-packager": "^17.1.2"
+    "electron-packager": "^17.1.2",
+    "typescript": "^5.4.0"
   }
 }
