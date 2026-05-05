@@ -1,8 +1,7 @@
 import { DataSource } from 'typeorm';
 import path from 'path';
 import { app } from 'electron';
-import { Company } from './entities/Company';
-import { Employee } from './entities/Employee';
+import { Company, Employee } from './entities';
 
 let _source: DataSource | null = null;
 

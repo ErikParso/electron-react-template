@@ -1,6 +1,5 @@
 import { getAppDataSource } from './data-source';
-import { Company } from './entities/Company';
-import { Employee } from './entities/Employee';
+import { Company, Employee } from './entities';
 
 export async function seedDatabase(): Promise<void> {
   const companyRepo = getAppDataSource().getRepository(Company);

@@ -1,6 +1,6 @@
 import { ipcMain } from 'electron';
 import { getAppDataSource } from '../database/data-source';
-import { Company } from '../database/entities/Company';
+import { Company } from '../database/entities';
 
 export function registerHandlers(): void {
   ipcMain.handle('get-companies', async () => {
