@@ -16,7 +16,13 @@
       "Bash(timeout 20 npm start)",
       "Bash(node -e ' *)",
       "Bash(timeout 10 npm start)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(Get-ChildItem -Path \"c:\\\\repos\\\\testElectron\" -Force -Recurse)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Sort-Object)",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\repos\\\\testElectron\" -Force | Where-Object { $_.PSIsContainer } | Select-Object Name)",
+      "Bash(echo \"EXIT:$?\")",
+      "PowerShell(head -30)"
     ]
   }
 }

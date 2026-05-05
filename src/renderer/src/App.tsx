@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Company } from "./types";
+import { useEffect, useState } from 'react';
+import { Company } from './types';
 
 export default function App() {
   const [companies, setCompanies] = useState<Company[]>([]);
@@ -32,26 +32,26 @@ export default function App() {
 
 const styles: Record<string, React.CSSProperties> = {
   container: {
-    fontFamily: "monospace",
-    padding: "2rem",
-    maxWidth: "800px",
-    margin: "0 auto",
+    fontFamily: 'monospace',
+    padding: '2rem',
+    maxWidth: '800px',
+    margin: '0 auto',
   },
   heading: {
-    fontSize: "1.5rem",
-    marginBottom: "1rem",
+    fontSize: '1.5rem',
+    marginBottom: '1rem',
   },
   pre: {
-    background: "#1e1e1e",
-    color: "#d4d4d4",
-    padding: "1.5rem",
-    borderRadius: "6px",
-    overflow: "auto",
-    fontSize: "0.875rem",
-    lineHeight: "1.5",
+    background: '#1e1e1e',
+    color: '#d4d4d4',
+    padding: '1.5rem',
+    borderRadius: '6px',
+    overflow: 'auto',
+    fontSize: '0.875rem',
+    lineHeight: '1.5',
   },
   status: {
-    fontFamily: "monospace",
-    padding: "2rem",
+    fontFamily: 'monospace',
+    padding: '2rem',
   },
 };

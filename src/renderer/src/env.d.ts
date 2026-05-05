@@ -2,6 +2,6 @@
 
 interface Window {
   api: {
-    getCompanies: () => Promise<import("./types").Company[]>;
+    getCompanies: () => Promise<import('./types').Company[]>;
   };
 }
