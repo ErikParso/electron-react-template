@@ -7,9 +7,6 @@ files:
   - out/**/*
   - node_modules/**/*
   - package.json
-asar: false
-asarUnpack:
-  - node_modules/sqlite3
 includeSubNodeModules: true
 win:
   executableName: TestElectron
