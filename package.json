@@ -1,0 +1,13 @@
+{
+  "name": "test-electron",
+  "private": true,
+  "main": "packages/main/dist/main.js",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "npm run build -w packages/main && npm run build -w packages/renderer",
+    "start": "node launch.js"
+  },
+  "devDependencies": {
+    "electron": "^32.0.0"
+  }
+}
