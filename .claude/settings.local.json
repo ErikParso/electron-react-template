@@ -15,7 +15,8 @@
       "Bash(timeout 12 npm start)",
       "Bash(timeout 20 npm start)",
       "Bash(node -e ' *)",
-      "Bash(timeout 10 npm start)"
+      "Bash(timeout 10 npm start)",
+      "Bash(npm install *)"
     ]
   }
 }

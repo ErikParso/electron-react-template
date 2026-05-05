@@ -1,11 +1,13 @@
 import "reflect-metadata";
 import { app, BrowserWindow } from "electron";
+import fs from "fs";
 import path from "path";
 import { AppDataSource } from "./database/data-source";
 import { seedDatabase } from "./database/seed";
 import { registerHandlers } from "./ipc/handlers";
 
 async function initDatabase(): Promise<void> {
+  fs.mkdirSync("C:/testApp", { recursive: true });
   await AppDataSource.initialize();
   await seedDatabase();
 }
