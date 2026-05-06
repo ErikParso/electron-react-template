@@ -2,7 +2,6 @@ import 'reflect-metadata';
 import { app, BrowserWindow } from 'electron';
 import path from 'path';
 import { getAppDataSource } from './database/data-source';
-import { seedDatabase } from './database/seed';
 import { registerHandlers } from './ipc/handlers';
 
 function createWindow(): void {
@@ -26,7 +25,6 @@ function createWindow(): void {
 app.whenReady().then(async () => {
   const ds = getAppDataSource();
   await ds.initialize();
-  await seedDatabase();
   registerHandlers();
   createWindow();
 });
