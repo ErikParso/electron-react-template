@@ -1,5 +1,5 @@
-appId: com.testelectron.app
-productName: TestElectron
+appId: com.electronReactTemplate.app
+productName: ElectronReactTemplate
 directories:
   buildResources: build
   output: release
@@ -9,7 +9,7 @@ files:
   - package.json
 includeSubNodeModules: true
 win:
-  executableName: TestElectron
+  executableName: ElectronReactTemplate
   signAndEditExecutable: false
   target:
     - target: dir
