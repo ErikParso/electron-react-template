@@ -1,13 +1,9 @@
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite';
 import react from '@vitejs/plugin-react';
-import swc from 'unplugin-swc';
 
 export default defineConfig({
 	main: {
-		plugins: [
-			externalizeDepsPlugin(),
-			swc.vite({ tsconfigFile: './tsconfig.node.json' }),
-		],
+		plugins: [externalizeDepsPlugin()],
 		build: {
 			rollupOptions: {
 				output: {
@@ -18,10 +14,7 @@ export default defineConfig({
 		},
 	},
 	preload: {
-		plugins: [
-			externalizeDepsPlugin(),
-			swc.vite({ tsconfigFile: './tsconfig.node.json' }),
-		],
+		plugins: [externalizeDepsPlugin()],
 	},
 	renderer: {
 		plugins: [react()],

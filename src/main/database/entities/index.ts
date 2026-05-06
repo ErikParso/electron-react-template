@@ -5,7 +5,7 @@ export class Company {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column()
+  @Column({ type: 'text' })
   name!: string;
 
   @OneToMany(() => Employee, (employee) => employee.company)
@@ -17,7 +17,7 @@ export class Employee {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column()
+  @Column({ type: 'text' })
   name!: string;
 
   @ManyToOne(() => Company, (company) => company.employees)
