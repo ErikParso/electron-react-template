@@ -8,3 +8,11 @@ export interface Company {
 	name: string;
 	employees: Employee[];
 }
+
+declare global {
+	interface Window {
+		api: {
+			getCompanies: () => Promise<Company[]>;
+		};
+	}
+}
